@@ -4,11 +4,8 @@
  * что хранится в likes
  */
 
-fun main (){
-    val likes: Int = 32
-    if (likes % 100 in 10..20) {
-        println("Понравилось $likes людям")
-    } else if (likes % 10 in 2..9) {
-        println("Понравилось $likes людям")
-    } else println("Понравилось $likes человеку")
+fun main() {
+    val likes = 31
+    val result = if (likes % 10 == 1 && likes % 100 != 11 || likes == 1) "человеку" else "людям"
+    println("Понравилось: $likes $result")
 }
